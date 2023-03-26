@@ -14,6 +14,7 @@
 
 # production
 /build
+/azure
 
 # misc
 .DS_Store
