@@ -2,13 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, 
+First, change your node version to 16 not 18
 ```bash
-npm use 16
+nvm use 16
 # and
 npm run dev
 # or
-pnpm dev
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
