@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import  { FormEvent, useState } from 'react'
 import fetchSuggestion from '@/lib/fetchSuggestion'
 import fetchImages from '@/lib/fetchImages'
-import { Toast, toast } from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 
 export default function PromptInput() {
    const [input,setInput]= useState('')
@@ -74,7 +74,7 @@ export default function PromptInput() {
              disabled:text-gray-300 disabled:cursor-not-allowed
              disabled:bg-gray-400'>use suggestion</button>
 
-             <button type='button' onClick={mutate} className='p-4 text-violet-500 border-none bg-white
+             <button type='button' onClick={()=>mutate(suggestion)} className='p-4 text-violet-500 border-none bg-white
              transition-colors duration-200 font-bold
              disabled:text-gray-300 disabled:cursor-not-allowed
              disabled:bg-gray-400 rounded-b-md md:rounded-r-md
@@ -92,3 +92,5 @@ export default function PromptInput() {
     
   )
 }
+export const dynamic = 'force-dynamic'
+
