@@ -1,6 +1,6 @@
 export async function GET(request: Request) {
     // connect to microsoft azure
-    const env = process.env.NODE_ENV === 'production'? process.env.GENERATE_SUGGESTION :'http://localhost:7071/api/getChatGPTSuggestion'
+    const env =  process.env.GENERATE_SUGGESTION
 
     try {
         const res = await fetch(`${env}`,{
@@ -14,7 +14,7 @@ export async function GET(request: Request) {
         })
         
     } catch (error) {
-       
+       console.log(error)
         return new Response(JSON.stringify({error}))
         
     }

@@ -1,6 +1,6 @@
 
 export async function GET(request: Request) {
-  const env = process.env.NODE_ENV === 'production'? process.env.GET_IMAGES :'http://localhost:7071/api/getImage'
+  const env =  process.env.GET_IMAGES
 
     const response = await fetch(
       `${env}`,

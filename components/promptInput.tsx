@@ -1,6 +1,6 @@
 'use client'
 import useSWR from 'swr'
-import  { FormEvent, useState } from 'react'
+import  { ChangeEvent, FormEvent, useState } from 'react'
 import fetchSuggestion from '@/lib/fetchSuggestion'
 import fetchImages from '@/lib/fetchImages'
 import { toast } from 'react-hot-toast'
@@ -59,7 +59,7 @@ export default function PromptInput() {
         <form onSubmit={submitHandler} className='flex flex-col lg:flex-row shadow-md
         shadow-slate-400/10 border rounded-md lg:divide-x'>
              <textarea value={input} 
-              onChange={(e)=>setInput(e.target.value)} 
+              onChange={(e:ChangeEvent<HTMLTextAreaElement>)=>setInput(e.target.value)} 
               placeholder={(isLoading && "loading suggestion...") 
               || suggestion || 'enter a prompt'
                } 
